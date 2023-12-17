@@ -1,0 +1,18 @@
+#include<stdio.h>
+
+// Factorial of any number using recursion
+
+long int multiplyNum(int n);
+int main() {
+    int n;
+    printf("Enter a positive integer: ");
+    scanf("%d",&n);
+    printf("Factorial of %d = %ld", n, multiplyNum(n));
+}
+
+long int multiplyNum(int n) {
+    if (n>=1)
+        return n*multiplyNum(n-1);
+    else
+        return 1;
+}
