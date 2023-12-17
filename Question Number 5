@@ -1,0 +1,22 @@
+#include<stdio.h>
+void main()
+
+{
+    // Let supposed we enter the values 5432
+    // the reverse vales will be 2345
+    
+    int n, reverse = 0,remainder;
+    
+    printf("Enter an integer values : ");
+    scanf("%d",&n);
+    
+    while(n!=0)
+    
+    {
+        remainder = n%10;
+        reverse = reverse *10 + remainder;
+        n/=10;
+    }
+    
+    printf("Reversed number : %d",reverse);
+}
