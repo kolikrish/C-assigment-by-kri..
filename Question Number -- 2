@@ -1,0 +1,25 @@
+#include<stdio.h>
+void main()
+
+{
+    
+    // suppose -   N1 = 10 , N2 = 20 , N3 = 30
+    // The greatest number will be 30
+    
+    int N1,N2,N3;
+    printf("Enter three values : ");
+    scanf("%d %d %d",&N1,&N2,&N3);
+    
+    if(N1 >= N2 && N1 >= N3)
+    {
+        printf("%d is greatest number",N1);
+    }
+        
+    else if(N2 >= N1 && N2 >=N3)
+    {
+        printf("%d is greatest number",N2);
+    }
+        
+    else
+        printf("%d is greatest number",N3);
+}
