@@ -16,6 +16,7 @@ void main()
 		{
 			if (a[j] > a[i])                
 			{
+                                //  tmp means temprory variable
 				int tmp = a[i];         
 				a[i] = a[j];            
 				a[j] = tmp;             
