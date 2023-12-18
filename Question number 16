@@ -14,7 +14,7 @@ void main() {
   person1. salary = 65000;
 
   printf("Name: %s\n", person1.name);
-  printf("Citizenship No.: %d\n", person1.citNo);
+  printf("Citizenship No.: %d\n", person1.cityNo);
   printf("Salary: %.2f", person1.salary);
 
 }
