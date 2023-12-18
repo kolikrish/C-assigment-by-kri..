@@ -3,7 +3,7 @@ void reverse();
 
 void main() {
     printf("Enter a sentence: ");
-    reverseSentence();
+    reverse();
 }
 
 void reverse() {
