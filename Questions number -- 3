@@ -1,0 +1,40 @@
+ #include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+void printCases(char inputString[]) {
+    int length = strlen(inputString);
+
+    // Convert to lower case
+    for (int i = 0; i < length; i++) {
+        inputString[i] = tolower(inputString[i]);
+    }
+    printf("Lower Case: %s\n", inputString);
+
+    // Convert to upper case
+    for (int i = 0; i < length; i++) {
+        inputString[i] = toupper(inputString[i]);
+    }
+    printf("Upper Case: %s\n", inputString);
+
+    // Convert to mixed case
+    for (int i = 0; i < length; i++) {
+        if (islower(inputString[i])) {
+            inputString[i] = toupper(inputString[i]);
+        } else if (isupper(inputString[i])) {
+            inputString[i] = tolower(inputString[i]);
+        }
+    }
+    printf("Mixed Case: %s\n", inputString);
+}
+void main() {
+    char inputString[100];
+
+    // Get input from the user
+    printf("Enter a string: ");
+    fgets(inputString, sizeof(inputString), stdin);
+    inputString[strcspn(inputString, "\n")] = '\0';  // Remove the newline character
+
+    // Call the function to print different cases
+    printCases(inputString);
+}
